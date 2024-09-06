@@ -26,7 +26,7 @@ def url_unfrndly_b64(data):
     return data.replace('~','=').replace('!','/').replace('-','+')
 
 def url_frndly_b64(data):
-    return data.replace('=','~').replace('/','!').replace('-','+')
+    return data.replace('=','~').replace('/','!').replace('+','-')
 
 def test(c_prime, c, param_name):
     to_test = c_prime + c

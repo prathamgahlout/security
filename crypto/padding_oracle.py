@@ -2,7 +2,6 @@ import argparse
 import urlparse
 import base64
 import requests
-from aes import AES_CBC
 
 argparser = argparse.ArgumentParser()
 
@@ -76,7 +75,6 @@ target_params = []
 
 for param in parameters.items():
     try:
-        print url_unfrndly_b64(param[1][0])
         base64.decodestring(url_unfrndly_b64(param[1][0]))
         target_params.append(param)
     except:
